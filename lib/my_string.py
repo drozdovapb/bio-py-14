@@ -1,5 +1,3 @@
-#! /usr/bin/env python
-
 def startswith(string, begin):
     ''' (string, string) -> (bool)
     Defines whether a string begins with some substring
@@ -8,9 +6,7 @@ def startswith(string, begin):
     >>> startswith('an extremely long test string', 'string')
     False
     '''
-    if string[:len(begin)] == begin:
-        return True
-    return False
+    return string[:len(begin)] == begin
 
 def endswith(string, end):
     ''' (string, string) -> (bool)
@@ -20,9 +16,7 @@ def endswith(string, end):
     >>> endswith('an extremely long test string', 'string')
     True
     '''
-    if string[-len(end):] == end:
-        return True
-    return False
+    return string[-len(end):] == end
 
 def isdigit(s):
     ''' (string) -> (bool)
@@ -32,6 +26,4 @@ def isdigit(s):
     >>> isdigit('a')
     False
     '''
-    if s < 'a':
-        return True
-    return False
+    return (s > '/' and s < ':')

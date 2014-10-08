@@ -1,5 +1,3 @@
-#! /usr/bin/env python
-
 def is_dna(string):
     ''' (string) -> (bool)
     This function checks whether a string is a valid DNA sequence
@@ -11,7 +9,10 @@ def is_dna(string):
     string = string.upper()
     counter=0
     for n in range(0, len(string)):
-        counter = counter + ((string[n] != 'A') and (string[n] != 'C') and (string[n] != 'G') and (string[n] != 'T'))
+        counter = counter + ((string[n] != 'A') \
+                             and (string[n] != 'C') \
+                             and (string[n] != 'G') \
+                             and (string[n] != 'T'))
     return not(bool(counter))
 
 def is_stop_codon(codon):
@@ -23,7 +24,6 @@ def is_stop_codon(codon):
     False
     '''
     codon = codon.upper()
-    if (codon == 'UAA') or (codon == 'UAG') or (codon == 'UGA') or (codon == 'TAA') or (codon == 'TAG') or (codon == 'TGA'):
-        return True
-    return False
-    
+    return (codon == 'UAA') or (codon == 'TAA') \
+       or (codon == 'UAG') or (codon == 'TAG') \
+       or (codon == 'UGA') or (codon == 'TGA')
