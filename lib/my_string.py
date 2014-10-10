@@ -26,4 +26,4 @@ def isdigit(s):
     >>> isdigit('a')
     False
     """
-    return (s >= '0' and s <= '9')
+    return s >= '0' and s <= '9'

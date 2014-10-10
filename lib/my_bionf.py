@@ -7,13 +7,9 @@ def is_dna(string):
     False
     """
     string = string.upper()
-    counter=0
-    for n in range(0, len(string)):
-        counter = counter + ((string[n] != 'A') \
-                             and (string[n] != 'C') \
-                             and (string[n] != 'G') \
-                             and (string[n] != 'T'))
-        if counter:
+    for i in range(0, len(string)):
+        if (string[i] != 'A') and (string[i] != 'C') \
+           and (string[i] != 'G') and (string[i] != 'T'):
             return False
     return True
 

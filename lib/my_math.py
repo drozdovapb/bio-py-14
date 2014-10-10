@@ -1,8 +1,8 @@
-def max(a,b):
+def max(a, b):
     """ (number, number) -> number
     returns the larger of two numbers
 
-    >>> max(1,2)
+    >>> max(1, 2)
     2
     >>> max(2/2, 1.00)
     1.0
@@ -11,10 +11,10 @@ def max(a,b):
         return a
     return b
 
-def min(a,b):
+def min(a, b):
     """ (number, number) -> number
     returns the smaller of two numbers
-    >>> min(1,2)
+    >>> min(1, 2)
     1
     >>> min(2/2, 1.00)
     1.0
@@ -34,8 +34,8 @@ def ceil(a):
     -4
     """
     if a - int(a) <= 0:
-        return float(int(a))
-    return int(a + 1.0)
+        return int(a)
+    return int(a + 1)
 
 def floor(a):
     """ (float) -> (int)
@@ -49,4 +49,4 @@ def floor(a):
     """
     if a - int(a) >= 0:
         return int(a)
-    return int(a - 1.0)
+    return int(a - 1)
