@@ -7,9 +7,9 @@ def is_dna(string):
     False
     """
     string = string.upper()
-    for i in range(0, len(string)):
+    for i in range(len(string)):
         if (string[i] != 'A') and (string[i] != 'C') \
-           and (string[i] != 'G') and (string[i] != 'T'):
+                and (string[i] != 'G') and (string[i] != 'T'):
             return False
     return True
 
@@ -23,5 +23,5 @@ def is_stop_codon(codon):
     """
     codon = codon.upper()
     return (codon == 'UAA') or (codon == 'TAA') \
-       or (codon == 'UAG') or (codon == 'TAG') \
-       or (codon == 'UGA') or (codon == 'TGA')
+            or (codon == 'UAG') or (codon == 'TAG') \
+            or (codon == 'UGA') or (codon == 'TGA')
